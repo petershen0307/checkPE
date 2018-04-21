@@ -1,2 +1,7 @@
-# checkPE
-check the file is PE or not
+* [CreateFile](https://msdn.microsoft.com/zh-tw/library/windows/desktop/aa363858(v=vs.85).aspx)
+* [Creating and Opening Files](https://msdn.microsoft.com/zh-tw/library/windows/desktop/aa363874(v=vs.85).aspx)
+* [ReadFile](https://msdn.microsoft.com/zh-tw/library/windows/desktop/aa365467(v=vs.85).aspx)
+* [PE Format](https://msdn.microsoft.com/zh-tw/library/windows/desktop/ms680547(v=vs.85).aspx#coff_file_header__object_and_image_)
+* [SetFilePointer](https://msdn.microsoft.com/zh-tw/library/windows/desktop/aa365541(v=vs.85).aspx)
+* [GetModuleFileName](https://msdn.microsoft.com/zh-tw/library/windows/desktop/ms683197(v=vs.85).aspx)
+* [VirtualAlloc](https://msdn.microsoft.com/en-us/library/windows/desktop/aa366887(v=vs.85).aspx)
