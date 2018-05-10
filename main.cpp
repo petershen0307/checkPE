@@ -46,18 +46,21 @@ int isPE(PTSTR fileName)
     ret = SetFilePointer(file, signatureOffset, NULL, FILE_BEGIN);
     if (ret == INVALID_SET_FILE_POINTER)
     {
+        CloseHandle(file);
         _tprintf(_T("SetFilePointer error code: %d\n"), GetLastError());
         return -1;
     }
     ReadFile(file, &signatureLocation, offsetSize, &read, NULL);
     if (read != 4)
     {
+        CloseHandle(file);
         _tprintf(_T("ReadFile error code: %d\n"), GetLastError());
         return -1;
     }
     ret = SetFilePointer(file, signatureLocation, NULL, FILE_BEGIN);
     if (ret == INVALID_SET_FILE_POINTER)
     {
+        CloseHandle(file);
         _tprintf(_T("SetFilePointer error code: %d\n"), GetLastError());
         return -1;
     }
@@ -66,8 +69,10 @@ int isPE(PTSTR fileName)
     ReadFile(file, &signature, signatureSize, &read, NULL);
     if (read != 4)
     {
+        CloseHandle(file);
         _tprintf(_T("ReadFile error code: %d\n"), GetLastError());
         return -1;
     }
+    CloseHandle(file);
     return signature == 0x4550;
 }
